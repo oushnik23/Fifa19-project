@@ -150,14 +150,3 @@ from sklearn.model_selection import cross_val_score
 score=cross_val_score(X=xtrain,y=ytrain,cv=10,estimator=lr_model)
 print("Accuracy {0} :".format(score.mean()*100))
 print("Standard deviation {0}".format(score.std()*100))
-
-#from sklearn.inspection import permutation_importance
-#perm=permutation_importance(lr_model,xtest,ytest,n_repeats=30,random_state=1)
-#show_weights(perm, feature_names = xtest.columns.tolist())
-
-
-
-#import eli5
-#from eli5.sklearn import PermutationImportance
-#perm = PermutationImportance(model, random_state=1).fit(X_test, y_test)
-#eli5.show_weights(perm, feature_names = X_test.columns.tolist())
